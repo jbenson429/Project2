@@ -52,7 +52,7 @@ Returns
     nums: The list of random numbers
 '''
 import random
-def generate_nums(size = 1, floor = 1, ceiling = 100):
+def generate_nums(size = 1, floor = 1, ceiling = 1_000):
     nums = []
 
     for i in range(0, size):
