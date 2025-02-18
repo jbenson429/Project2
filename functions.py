@@ -1,4 +1,4 @@
-def mainMenu():
+def main_menu():
     print("Select the sorting algorithm you want to test.\n\
           ---------------------------\n\
           1. Bubble Sort\n\
@@ -8,7 +8,7 @@ def mainMenu():
           5. Exit\n\
           Select a sorting algorithm (1-5): ")
     
-def bblMenu():
+def bbl_menu():
     print("\nCase Scenarios for Bubble Sort\n\
           -----------------\n\
           1. Best Case\n\
@@ -16,7 +16,7 @@ def bblMenu():
           3. Worst Case\n\
           4. Exit bubble sort test")
     
-def mergeMenu():
+def merge_menu():
     print("\nCase Scenarios for Merge Sort\n\
           -----------------\n\
           1. Best Case\n\
@@ -24,7 +24,7 @@ def mergeMenu():
           3. Worst Case\n\
           4. Exit merge sort test")
     
-def quickMenu():
+def quick_menu():
     print("\nCase Scenarios for Quick Sort\n\
           -----------------\n\
           1. Best Case\n\
@@ -32,7 +32,7 @@ def quickMenu():
           3. Worst Case\n\
           4. Exit quick sort test")
     
-def tbdMenu():
+def tbd_menu():
     print("\nCase Scenarios for tbd Sort\n\
           -----------------\n\
           1. Best Case\n\
@@ -40,7 +40,7 @@ def tbdMenu():
           3. Worst Case\n\
           4. Exit tbd sort test")
     
-def BBLSort(arr):
+def bbl_sort(arr):
     n = len(arr)
     
     # Traverse through all elements in the list
@@ -53,7 +53,7 @@ def BBLSort(arr):
     
     return arr
 
-def MergeSort(arr):
+def merge_sort(arr):
     # Base case: if the list is a single element, it is already sorted
     if len(arr) > 1:
         
@@ -65,8 +65,8 @@ def MergeSort(arr):
         right_half = arr[mid:]
         
         # Recursively sort both halves
-        MergeSort(left_half)
-        MergeSort(right_half)
+        merge_sort(left_half)
+        merge_sort(right_half)
         
         # Merge the sorted halves
         i = j = k = 0
@@ -95,7 +95,7 @@ def MergeSort(arr):
 
     return arr
 
-def QuickSort(arr):
+def quick_sort(arr):
     # Base case: if the list has one or zero elements, it's already sorted
     if len(arr) <= 1:
         return arr
