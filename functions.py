@@ -1,3 +1,4 @@
+######### Menu options below #########
 def main_menu():
     print("Select the sorting algorithm you want to test.\n\
           ---------------------------\n\
@@ -39,8 +40,28 @@ def tbd_menu():
           2. Average Case\n\
           3. Worst Case\n\
           4. Exit tbd sort test")
-    
-def bbl_sort(arr):
+################################################
+
+'''
+Generates a list of random numbers to be sorted by a sorting algorithm
+Parameters
+    size: The amount of numbers to generate
+    floor: The lower bound of the number generator
+    ceiling: The upper bound of the number generator
+Returns
+    nums: The list of random numbers
+'''
+import random
+def generate_nums(size = 1, floor = 1, ceiling = 100):
+    nums = []
+
+    for i in range(0, size):
+        nums.append(random.randrange(floor, ceiling))
+
+    return nums
+
+######### Sorting Algorithms below #########
+def bubble_sort(arr):
     n = len(arr)
     
     # Traverse through all elements in the list
@@ -109,5 +130,5 @@ def quick_sort(arr):
     
     # Recursively apply quick_sort to the left and right partitions, and concatenate the result with the pivot
     return quick_sort(left) + [pivot] + quick_sort(right)
-
+############################################################
 
