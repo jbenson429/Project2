@@ -9,7 +9,7 @@ def main_menu():
           5. Exit\n\
           Select a sorting algorithm (1-5): ")
     
-def bbl_menu():
+def bubble_menu():
     print("\nCase Scenarios for Bubble Sort\n\
           -----------------\n\
           1. Best Case\n\
@@ -59,6 +59,17 @@ def generate_nums(size = 1, floor = 1, ceiling = 1_000):
         nums.append(random.randrange(floor, ceiling))
 
     return nums
+
+# Gets an integer from the user with error checking
+def get_choice(prompt):
+    while True:
+        try:
+            x = int(input(prompt))
+            break
+        except ValueError:
+            print("Invalid input. Please enter one of the listed integers.")
+    return x
+
 
 ######### Sorting Algorithms below #########
 def bubble_sort(arr):
